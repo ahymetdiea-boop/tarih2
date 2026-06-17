@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Қазақстан Тарихы</title>
+    <style>
+        /* Негізгі дизайн (CSS) */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #00B0F0; /* Көк ту түстес */
+            color: #FFD700; /* Алтын түстес */
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #007BB5;
+        }
+        nav a {
+            color: white;
+            padding: 15px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        nav a:hover {
+            background-color: #005A88;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        h2 {
+            color: #005A88;
+            border-bottom: 2px solid #00B0F0;
+            padding-bottom: 10px;
+        }
+        
+        /* Хронология стилі */
+        details {
+            background-color: white;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+        summary {
+            background-color: #e6f7ff;
+            padding: 15px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            list-style: none; /* Бағыттаманы жасыру */
+            position: relative;
+        }
+        summary::-webkit-details-marker {
+            display: none;
+        }
+        summary::after {
+            content: '+';
+            position: absolute;
+            right: 20px;
+            font-size: 1.5em;
+            color: #007BB5;
+            transition: transform 0.3s;
+        }
+        details[open] summary::after {
+            content: '-';
+        }
+        .details-content {
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .details-content img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 8px;
+            margin: 15px 0;
+            display: block;
+        }
+
+        /* Тапсырмалар стилі */
+        .task-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 5px solid #FFD700;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .question {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .options label {
+            display: block;
+            margin-bottom: 8px;
+            cursor: pointer;
+        }
+        button {
+            background-color: #00B0F0;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #007BB5;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Қазақстан Тарихы</h1>
+        <p>Ұлы даланың бай тарихы мен шежіресі</p>
+    </header>
+
+    <nav>
+        <a href="#chronology">Хронология</a>
+        <a href="#tasks">Тапсырмалар</a>
+    </nav>
+
+    <div class="container">
+        <section id="chronology">
+            <h2>Тарихи Хронология</h2>
+            <p>Дәуірлер туралы толық ақпаратты көру үшін тақырыпты басыңыз:</p>
+
+            <details>
+                <summary>Ежелгі Қазақстан (Б.з.б. VIII ғ. – Б.з. V ғ.) - Сақтар мен Ғұндар</summary>
+                <div class="details-content">
+                    <p>Қазақстан аумағындағы алғашқы тайпалық одақтар мен мемлекеттер. Сақтар (скифтер) Еуразия даласында үстемдік еткен көшпелі жауынгер халық болды. Олардың "Алтын адам" ескерткіші әлемге әйгілі.</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Golden_Man_of_Issyk.jpg/800px-Golden_Man_of_Issyk.jpg" alt="Алтын Адам">
+                    <p>Кейінірек бұл аумақта Ғұндар мен Үйсін мемлекеттері өмір сүрді. Ғұндардың батысқа қоныс аударуы Еуропадағы "Халықтардың ұлы қоныс аударуына" түрткі болды.</p>
+                </div>
+            </details>
+
+            <details>
+                <summary>Қазақ хандығының құрылуы (1465 жыл)</summary>
+                <div class="details-content">
+                    <p>1465 жылы Керей мен Жәнібек сұлтандар Әбілхайыр хандығынан бөлініп, Жетісу жеріндегі Қозыбасы тауының бөктерінде алғашқы Қазақ хандығының туын тікті.</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Kazakh_Khanate.svg/800px-Kazakh_Khanate.svg.png" alt="Қазақ хандығының картасы">
+                    <p>Қасым, Хақназар, Тәуке хандардың тұсында хандықтың шекарасы кеңейіп, "Қасым ханның қасқа жолы", "Жеті жарғы" секілді заңдар жинағы қабылданды.</p>
+                </div>
+            </details>
+
+            <details>
+                <summary>Тәуелсіз Қазақстан (1991 жылдан бастап)</summary>
+                <div class="details-content">
+                    <p>1991 жылы 16 желтоқсанда Қазақстан Республикасы өзінің мемлекеттік тәуелсіздігін жариялады. Тұңғыш Президент болып Нұрсұлтан Назарбаев сайланды.</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Flag_of_Kazakhstan.svg/800px-Flag_of_Kazakhstan.svg.png" alt="Қазақстан туы">
+                    <p>Бүгінде Қазақстан – экономикасы дамыған, көпұлтты, бейбітшіліксүйгіш, әлем мойындаған тәуелсіз мемлекет.</p>
+                </div>
+            </details>
+        </section>
+
+        <section id="tasks">
+            <h2>Тапсырмалар мен Тесттер</h2>
+            <p>Оқыған материалды бекіту үшін төмендегі тапсырмаларды орындаңыз.</p>
+
+            <form id="quizForm">
+                <div class="task-card">
+                    <div class="question">1. Қазақ хандығы қай жылы құрылды?</div>
+                    <div class="options">
+                        <label><input type="radio" name="q1" value="a"> 1550 жылы</label>
+                        <label><input type="radio" name="q1" value="b"> 1465 жылы</label>
+                        <label><input type="radio" name="q1" value="c"> 1731 жылы</label>
+                    </div>
+                </div>
+
+                <div class="task-card">
+                    <div class="question">2. "Алтын адам" қай дәуірге/тайпаға тиесілі?</div>
+                    <div class="options">
+                        <label><input type="radio" name="q2" value="a"> Сақтар</label>
+                        <label><input type="radio" name="q2" value="b"> Ғұндар</label>
+                        <label><input type="radio" name="q2" value="c"> Түріктер</label>
+                    </div>
+                </div>
+
+                <div class="task-card">
+                    <div class="question">3. Қазақстан Тәуелсіздігін қашан жариялады?</div>
+                    <div class="options">
+                        <label><input type="radio" name="q3" value="a"> 1990 жыл 25 қазан</label>
+                        <label><input type="radio" name="q3" value="b"> 1991 жыл 1 желтоқсан</label>
+                        <label><input type="radio" name="q3" value="c"> 1991 жыл 16 желтоқсан</label>
+                    </div>
+                </div>
+
+                <button type="button" onclick="checkAnswers()">Жауаптарды тексеру</button>
+            </form>
+
+            <div id="result"></div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Қазақстан Тарихы. Барлық құқықтар қорғалған.</p>
+    </footer>
+
+    <script>
+        function checkAnswers() {
+            let score = 0;
+            let total = 3;
+
+            // Дұрыс жауаптар: 1-b, 2-a, 3-c
+            let q1 = document.querySelector('input[name="q1"]:checked');
+            let q2 = document.querySelector('input[name="q2"]:checked');
+            let q3 = document.querySelector('input[name="q3"]:checked');
+
+            // Егер сұрақтардың бәріне жауап берілмесе
+            if (!q1 || !q2 || !q3) {
+                document.getElementById('result').style.color = "red";
+                document.getElementById('result').innerText = "Өтініш, барлық сұрақтарға жауап беріңіз!";
+                return;
+            }
+
+            // Жауаптарды тексеру
+            if (q1.value === 'b') score++;
+            if (q2.value === 'a') score++;
+            if (q3.value === 'c') score++;
+
+            let resultDiv = document.getElementById('result');
+            if (score === total) {
+                resultDiv.style.color = "green";
+                resultDiv.innerText = "Керемет! Сіз барлық сұраққа дұрыс жауап бердіңіз (" + score + "/" + total + ").";
+            } else {
+                resultDiv.style.color = "orange";
+                resultDiv.innerText = "Нәтиже: " + score + "/" + total + ". Қателер бар, тарихты қайта қайталап көріңіз.";
+            }
+        }
+    </script>
+</body>
+</html>
